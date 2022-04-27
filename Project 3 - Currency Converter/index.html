@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="style.css" type="text/css">
+
+        <title> Currency converter app </title>
+    </head>
+
+    <body>
+        <!-- Online/offline and Network status detecting -->
+       <div id="error">
+            <div id="image">
+                <img src="images/error.png" alt="sorry">
+            </div>
+
+            <div id="info">
+                <p id="top">
+                    Oops! Something's missing.
+                </p>
+
+                <p id="middle">
+                    We are sorry for the inconvenience. It looks like you're trying to use the page with the network, that is not available. 
+                </p>
+
+                <p id="bottom">
+                    Please, check your connection.
+                </p>
+            </div>
+           <!-- <p> Sorry, this page cannot be reached. Please, check your network connection ! </p> -->
+       </div> 
+
+
+       <!-- Main content -->
+        <div id="wrapper">
+            <header>
+                <div id="logo">
+                    <img src="images/logo.png" alt="logo-picture">
+                </div>
+                <div id="navbar">
+                    <nav>
+                        <ul>
+                            <li><a href="#"> Bank </a></li>
+                            <li><a href="#"> Business </a></li>
+                            <li><a href="#"> Investments </a></li>
+                            <li><a href="#"> Insurance </a></li>
+                            <li><a href="#"> Mobile </a></li>
+                            <li><a href="#"> Trips </a></li>
+                            <li><a href="#"> Entertainment </a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="sign-in">
+                    <a href="#"> Sign up </a>
+                </div>
+
+                <div><a href="#" id="menu-icon"><img src="images/menu.png" alt="menu-icon"></a></div>
+            </header>
+
+            <div id="resp-nav">
+                <nav>
+                    <ul>
+                        <li><a href="#"> Bank </a></li>
+                        <li><a href="#"> Business </a></li>
+                        <li><a href="#"> Investments </a></li>
+                        <li><a href="#"> Insurance </a></li>
+                        <li><a href="#"> Mobile </a></li>
+                        <li><a href="#"> Trips </a></li>
+                        <li><a href="#"> Entertainment </a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="content">
+                <h1> Currency converter online </h1>
+
+                <div id="sections">
+                    <section id="input-section">
+                        <div class="txt"> From </div>
+
+                        <div class="currencies-menu">
+                            <nav>
+                                <ul>
+                                    <li> Rub </li>
+                                    <li> Usd </li>
+                                    <li> Eur </li>
+                                    <li> Gbp </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div id="input-field">
+                            <input type="text" value=" " oninput="this.value = this.value.replace(/[^0-9.,]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');" />
+                            <p class="info"> 1 RUB = 0.0135 USD </p>
+                        </div>
+                    </section>
+
+                    <section id="output-section">
+                        <div class="txt"> To </div>
+                        <div class="currencies-menu">
+                            <nav>
+                                <ul>
+                                    <li> Rub </li>
+                                    <li> Usd </li>
+                                    <li> Eur </li>
+                                    <li> Gbp </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div id="output-field">
+                            <p id="output">  </p>
+                            <p class="info"> 1 USD = 73.8896 RUB </p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="script.js" type="text/javascript"></script>
+    </body>
+</html>
